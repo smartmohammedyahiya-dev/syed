@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Indian Watch Co. and Opticals</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#0f0f0f;
+color:white;
+overflow-x:hidden;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+:root{
+--gold:#d4af37;
+--dark:#111;
+--card:#1a1a1a;
+}
+
+/* NAVBAR */
+
+nav{
+position:fixed;
+top:0;
+width:100%;
+padding:20px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:rgba(0,0,0,.8);
+backdrop-filter:blur(10px);
+z-index:1000;
+}
+
+.logo{
+font-size:28px;
+font-weight:700;
+color:var(--gold);
+}
+
+nav ul{
+display:flex;
+gap:25px;
+list-style:none;
+}
+
+nav a{
+text-decoration:none;
+color:white;
+transition:.3s;
+}
+
+nav a:hover{
+color:var(--gold);
+}
+
+/* HERO */
+
+.hero{
+height:100vh;
+background:
+linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),
+url("https://images.unsplash.com/photo-1523170335258-f5ed11844a49?w=1600");
+background-size:cover;
+background-position:center;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding:20px;
+}
+
+.hero-content h1{
+font-size:4rem;
+margin-bottom:15px;
+}
+
+.hero-content span{
+color:var(--gold);
+}
+
+.hero-content p{
+max-width:700px;
+margin:auto;
+margin-bottom:30px;
+font-size:1.1rem;
+}
+
+.btn{
+display:inline-block;
+padding:14px 30px;
+background:var(--gold);
+color:black;
+font-weight:600;
+border-radius:40px;
+text-decoration:none;
+margin:10px;
+transition:.3s;
+}
+
+.btn:hover{
+transform:translateY(-3px);
+}
+
+/* SECTIONS */
+
+section{
+padding:90px 8%;
+}
+
+.section-title{
+font-size:2.5rem;
+text-align:center;
+margin-bottom:50px;
+color:var(--gold);
+}
+
+/* CATEGORY CARDS */
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.card{
+background:var(--card);
+border-radius:20px;
+overflow:hidden;
+transition:.4s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+}
+
+.card img{
+width:100%;
+height:250px;
+object-fit:cover;
+}
+
+.card-content{
+padding:20px;
+}
+
+.card h3{
+margin-bottom:10px;
+color:var(--gold);
+}
+
+.price{
+font-size:20px;
+font-weight:bold;
+margin-top:10px;
+}
+
+/* DISCOUNT */
+
+.discount{
+background:linear-gradient(135deg,#d4af37,#f7d978);
+color:black;
+text-align:center;
+border-radius:20px;
+padding:50px;
+}
+
+.discount h2{
+font-size:3rem;
+margin-bottom:10px;
+}
+
+/* TESTIMONIALS */
+
+.testimonials{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
+}
+
+.review{
+background:var(--card);
+padding:25px;
+border-radius:15px;
+}
+
+.stars{
+color:gold;
+font-size:20px;
+margin-bottom:10px;
+}
+
+/* CONTACT */
+
+.contact-container{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:40px;
+}
+
+.contact-info{
+line-height:2;
+}
+
+form input,
+form textarea{
+width:100%;
+padding:15px;
+margin-bottom:15px;
+border:none;
+border-radius:10px;
+background:#222;
+color:white;
+}
+
+form button{
+background:var(--gold);
+border:none;
+padding:15px;
+width:100%;
+font-weight:bold;
+border-radius:10px;
+cursor:pointer;
+}
+
+/* MAP */
+
+.map iframe{
+width:100%;
+height:350px;
+border:none;
+border-radius:15px;
+}
+
+/* FOOTER */
+
+footer{
+background:black;
+padding:30px;
+text-align:center;
+color:#aaa;
+}
+
+/* WHATSAPP */
+
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+width:60px;
+height:60px;
+border-radius:50%;
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:30px;
+text-decoration:none;
+color:white;
+box-shadow:0 0 20px rgba(0,0,0,.3);
+}
+
+@media(max-width:768px){
+
+.hero-content h1{
+font-size:2.5rem;
+}
+
+nav ul{
+display:none;
+}
+
+}
+
+</style>
+</head>
+<body>
+
+<nav>
+<div class="logo">Indian Watch Co.</div>
+
+<ul>
+<li><a href="#premium">Premium</a></li>
+<li><a href="#regular">Regular</a></li>
+<li><a href="#gents">Gents</a></li>
+<li><a href="#ladies">Ladies</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+
+<section class="hero">
+
+<div class="hero-content">
+<h1>Timeless <span>Luxury</span><br>Trusted Quality</h1>
+
+<p>
+Discover premium, classic, and everyday watches for men and women at Indian Watch Co. and Opticals.
+</p>
+
+<a href="#premium" class="btn">Explore Collection</a>
+
+<a href="tel:+919849152683" class="btn">Call Now</a>
+
+<br><br>
+
+<h3>⭐ 4.8 Rating | Hyderabad</h3>
+</div>
+
+</section>
+
+<section>
+
+<h2 class="section-title">Watch Categories</h2>
+
+<div class="grid">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1547996160-81dfa63595aa?w=800">
+<div class="card-content">
+<h3>Premium Watches</h3>
+<p>Luxury collections for watch enthusiasts.</p>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1524592094714-0f0654e20314?w=800">
+<div class="card-content">
+<h3>Regular Watches</h3>
+<p>Affordable and stylish everyday watches.</p>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1612817159949-195b6eb9e31a?w=800">
+<div class="card-content">
+<h3>Gents Watches</h3>
+<p>Professional and sporty collections.</p>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1617043786394-f977fa12eddf?w=800">
+<div class="card-content">
+<h3>Ladies Watches</h3>
+<p>Elegant and fashionable designs.</p>
+</div>
+</div>
+
+</div>
+
+</section>
+
+<section id="premium">
+
+<h2 class="section-title">Premium Watches</h2>
+
+<div class="grid">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1524805444758-089113d48a6d?w=800">
+<div class="card-content">
+<h3>Luxury Gold Edition</h3>
+<p class="price">₹24,999</p>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1434056886845-dac89ffe9b56?w=800">
+<div class="card-content">
+<h3>Executive Collection</h3>
+<p class="price">₹34,999</p>
+</div>
+</div>
+
+</div>
+
+</section>
+
+<section id="regular">
+
+<h2 class="section-title">Regular Watches</h2>
+
+<div class="grid">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1508057198894-247b23fe5ade?w=800">
+<div class="card-content">
+<h3>Daily Wear Watch</h3>
+<p class="price">₹1,999</p>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1523170335258-f5ed11844a49?w=800">
+<div class="card-content">
+<h3>Classic Series</h3>
+<p class="price">₹2,499</p>
+</div>
+</div>
+
+</div>
+
+</section>
+
+<section id="gents">
+
+<h2 class="section-title">Gents Watches</h2>
+
+<div class="grid">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1614164185128-e4ec99c436d7?w=800">
+<div class="card-content">
+<h3>Formal Men's Watch</h3>
+<p class="price">₹4,999</p>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1612817159949-195b6eb9e31a?w=800">
+<div class="card-content">
+<h3>Sports Watch</h3>
+<p class="price">₹5,999</p>
+</div>
+</div>
+
+</div>
+
+</section>
+
+<section id="ladies">
+
+<h2 class="section-title">Ladies Watches</h2>
+
+<div class="grid">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1617043786394-f977fa12eddf?w=800">
+<div class="card-content">
+<h3>Diamond Style</h3>
+<p class="price">₹3,999</p>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1617038260897-41a1f14a8ca5?w=800">
+<div class="card-content">
+<h3>Elegant Collection</h3>
+<p class="price">₹4,499</p>
+</div>
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="discount">
+
+<h2>50% OFF</h2>
+
+<h3>Exclusive Discount Collection</h3>
+
+<p>
+Limited-time offers on selected watch collections.
+</p>
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="section-title">Customer Reviews</h2>
+
+<div class="testimonials">
+
+<div class="review">
+<div class="stars">★★★★★</div>
+<p>Excellent service and genuine watches. Highly recommended.</p>
+<strong>- Customer</strong>
+</div>
+
+<div class="review">
+<div class="stars">★★★★★</div>
+<p>Beautiful collection with affordable pricing.</p>
+<strong>- Customer</strong>
+</div>
+
+<div class="review">
+<div class="stars">★★★★★</div>
+<p>Best watch shop in Hyderabad. Great experience.</p>
+<strong>- Customer</strong>
+</div>
+
+</div>
+
+</section>
+
+<section id="contact">
+
+<h2 class="section-title">Contact Us</h2>
+
+<div class="contact-container">
+
+<div class="contact-info">
+
+<h3>Indian Watch Co. and Opticals</h3>
+
+<p>📍 Pillar No.107, Inner Ring Road, Karwan West, Attapur, Hyderabad</p>
+
+<p>📞 +91 98491 52683</p>
+
+<p>⭐ Google Rating: 4.8</p>
+
+</div>
+
+<form>
+
+<input type="text" placeholder="Your Name">
+
+<input type="tel" placeholder="Phone Number">
+
+<input type="text" placeholder="Interested Category">
+
+<textarea rows="5" placeholder="Message"></textarea>
+
+<button>Send Inquiry</button>
+
+</form>
+
+</div>
+
+</section>
+
+<section class="map">
+
+<iframe
+src="https://maps.google.com/maps?q=Attapur%20Hyderabad&t=&z=15&ie=UTF8&iwloc=&output=embed">
+</iframe>
+
+</section>
+
+<footer>
+
+<h3>Indian Watch Co. and Opticals</h3>
+
+<p>Luxury Watches • Premium Service • Trusted Quality</p>
+
+<p>© 2025 All Rights Reserved</p>
+
+</footer>
+
+<a
+class="whatsapp"
+href="https://wa.me/919849152683"
+target="_blank">
+💬
+</a>
+
+</body>
+</html>
